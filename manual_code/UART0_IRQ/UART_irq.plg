@@ -1,11 +1,13 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\jmcgirr\AppData\Local\Apps\2.0\A9WEQJVA.DGJ\DRVWN89M.R3R\gith..tion_317444273a93ac29_0001.0000_08490aa4380d2e54\ecfile1.uwaterloo.ca\jmcgirr\My Documents\GitHub\SE350\manual_code\UART0_IRQ\UART_irq.uvproj
+Project File Date:  02/24/2014
+
+<h2>Output:</h2>
 Build target 'UART0_IRQ SIM'
-compiling uart_polling.c...
 compiling uart_irq.c...
-compiling printf.c...
-compiling main_irq.c...
-linking...
-Program Size: Code=2516 RO-data=236 RW-data=36 ZI-data=1124  
-"UART_irq.axf" - 0 Error(s), 0 Warning(s).
-Clean started: Project: 'UART_irq'
-   deleting intermediate output files for target 'UART0_IRQ SIM'
-   deleting intermediate output files for target 'UART0_IRQ RAM'
+src\uart_irq.c(138): error:  #20: identifier "IER_RDA" is undefined
+Target not created

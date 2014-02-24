@@ -191,6 +191,7 @@ void c_UART0_IRQHandler(void)
 		
 		g_buffer[12] = g_char_in; // nasty hack
 		g_send_char = 1;
+		pUart->IER |= IER_THRE;
 	} else if (IIR_IntId & IIR_THRE) {
 	/* THRE Interrupt, transmit holding register becomes empty */
 
@@ -210,7 +211,7 @@ void c_UART0_IRQHandler(void)
 #ifdef DEBUG_0
 			uart1_put_string("Finish writing. Turning off IER_THRE\n\r");
 #endif // DEBUG_0
-			pUart->IER ^= IER_THRE; // toggle the IER_THRE bit 
+			pUart->IER &= ~IER_THRE; // disable the IER_THRE bit 
 			pUart->THR = '\0';
 			g_send_char = 0;
 			gp_buffer = g_buffer;		
